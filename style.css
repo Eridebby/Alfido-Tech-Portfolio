@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(255,255,255);
+}
+
+.nav, .nav_links {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+  
+}
+
+.nav a {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  color: black;
+  padding: 0 15px 0 15px;
+ color: black;
+}
+
+.nav .nav_links {
+  list-style-type: none;
+  display: flex;
+  width: 400px;
+  padding-top: 2rem;
+}
+
+.nav .nav_links li  {
+  width: 25%;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav .nav_links li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  left: 0;
+  bottom: -8px;
+  transition: all 500ms ease-in-out;
+}
+
+.nav .nav_links li:hover::after {
+  width: 90%;
+}
+
+.toggle {
+  display: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  margin-right: 3rem;
+}
+
+.toggle > .bar > div {
+  width: 25px;
+  margin-bottom: 3px;
+  height: 4px;
+  background-color: black;
+  
+
+}
+.close {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+
+button {
+  background-color: rgb(253, 68, 147);
+  color: white;
+  height: 35px;
+  border: none;
+  width: 8rem;
+  margin-top: 10px;
+ 
+  
+}
+
+button, a{
+    color: white;
+    text-decoration: none;
+    
+}
+.img img {
+  border-radius: 100%;
+  height: 200px;
+  width: 10rem;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s, transform 1s;
+}
+
+.hero_section{
+    max-width: 100%;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 0.5fr 1.2fr 0.2fr 1fr;
+    justify-content: space-around;
+    padding: 5rem;
+}
+.text p{
+padding: 1rem 0 1rem ;
+}
+
+
+.container{
+  height: 400px;
+  width: 100%;
+  background-color: rgb(237,247,250);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 6rem;
+  margin-top: 15px;
+  
+}
+
+.firstResume {
+  height: 250px;
+  width: 30rem;
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  
+
+
+}
+.secondResume{
+  height: 250px;
+  width: 30rem;
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  margin-left: 20px;
+}
+.firstResume h1, p{
+  padding-bottom: 20px;
+}
+
+.progress{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 4rem;
+} 
+progress {
+  width: 30rem;
+  height: 20px;
+  appearance: none;
+
+}
+
+progress::-webkit-progress-bar {
+  background-color: #ddd;
+}
+
+progress::-webkit-progress-value {
+  background-color: rgb(229, 248, 254);
+}
+
+progress::-moz-progress-bar {
+  background-color:rgb(229, 248, 254);
+}
+
+.progress progress{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+form{
+  margin: auto;
+  text-align: center;
+  height: 500px;
+  width: 60%;
+  background-color:rgb(237,247,250);
+  padding: 18px;
+
+}
+
+input, textarea{
+  width: 80%;
+  height: 45px;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+  border: none;
+}
+textarea{
+  height: 10rem;
+}
+.button {
+  width: 40%;
+  border-radius: 5px;
+}
+
+
+ img{
+  height: 300px;
+  padding: 1rem;
+ 
+}
+
+.project{
+  /* max-width: 100%; */
+  background-color: rgb(251, 253, 254);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 4rem;
+  justify-content: space-around;
+}
+
+
+.resume{
+  margin: auto;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+
+
+
+@media (max-width: 720px) {
+  body{
+    max-width: 100%;
+    padding: 0;
+  }
+  .toggle {
+    display: block;
+  }
+
+  .nav_links {
+    position: absolute;
+    left: -2000%;
+    top: 70px;
+    width: 50%;
+    height: 300px;
+    background-color: white;
+    flex-direction: column;
+    z-index: 999;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .nav .nav_links li {
+    margin-bottom: 15px;
+    width: fit-content;
+  }
+
+  .nav .nav_links li::after {
+    bottom: -4px;
+  }
+
+  .reveal {
+    left: 0;
+  }
+  .close {
+    display: none;
+  }
+  .display {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+  .hero_section, .progress{
+    display: block;
+   
+}
+  .container{
+    max-width: 100%;
+    display: block;
+    padding: 3rem;
+    height: fit-content;
+  }
+  .firstResume{
+   /* padding: 10px;  */
+    max-width: 100%;
+    padding-top: 10px;
+   
+    
+  }
+  .secondResume{
+    padding: 10px; 
+    max-width: 100%;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: -2px;
+  }
+  progress {
+    max-width: 100%;
+    height: 20px;
+    appearance: none;
+  
+  }
+  .project{
+    margin: auto;
+    text-align: center;
+    display: block;
+    max-width: 100%;
+    padding: 2rem;
+
+  }
+
+
+}
