@@ -227,7 +227,12 @@ textarea{
 }
 
 
-
+footer{
+  margin: 3rem 0 2rem 0;
+  text-align: center;
+  background-color: white;
+  height: 5rem;
+}
 
 @media (max-width: 720px) {
   body{
@@ -310,6 +315,9 @@ textarea{
     padding: 2rem;
 
   }
-
+footer{
+font-size: 0.8rem;
+  width: 100%;
+}
 
 }
